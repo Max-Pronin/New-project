@@ -17,6 +17,9 @@ driver.get('http://service.emias.mosreg.ru/prod/medicalrecords/tappage/edit?tick
 
 time.sleep(3)
 driver.find_element("xpath", "//span[@id='spanMU7']").click()
-# WebDriverWait(driver, 0.5).until(EC.element_to_be_clickable("xpath", "//span[@id='spanMU7']")).click()
 time.sleep(3)
+
+# Это та часть кода которая не работает. Проблема в том, не могу кликнуть на элемент, проверял xpath (он уникальный, один такой) просто код не видит такой элемент. На лейбл тоже не получается кликнуть. 
+# Пробовал с явным и неявным ожиданиями, выставлял время побольше, для загрузки, но ничего не выходит. Проблема в 19 стрйке. В остальных разделах, все работает классно. 
+# А именно на такие элементы как (да/нет) кликнуть не может.
 
